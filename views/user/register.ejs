@@ -1,0 +1,11 @@
+<p><% if(typeof msg !== "undefined") { %>
+<%=msg %>
+<% } %>
+</p>
+<form method="post" action="/register">
+    <input type="text" name="first_name" placeholder="firstname">
+    <input type="text" name="last_name" placeholder="lastname">
+    <input type="text" name="password" placeholder="pwd">
+    <input type="text" name="email" placeholder="email" >
+    <input type="submit" value="Submit">
+</form>

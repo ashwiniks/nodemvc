@@ -1,0 +1,23 @@
+<%- include('../includes/header') -%>
+    <p>Welcome to the homepage of {{ title }}}</p>
+    <table width="100%">
+
+        <% value.forEach(function(user){ %>
+            <tr>
+
+                <td>
+                    <%= user.id %>
+                </td>
+                <td>
+                        <%= user.name %>
+                    </td>
+                <td><a href="/edit/<%= user.id %>">Edit</a></td>
+
+                <td><form method="post" action="/delete" >
+                    <input type="hidden" name="id" value="<%= user.id %>" >
+                    <input type="submit" value="delete" >
+                    </form></td>
+            </tr>
+            <% }); %>
+
+    </table>
