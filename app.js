@@ -9,7 +9,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
  // send app to router
 require('./router')(app,urlencodedParser);
 
-app.set('port', 1337);
+app.set('port', 1338);
 
 
 
