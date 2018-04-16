@@ -1,5 +1,5 @@
 var db = require('../config/db.js');
-
+var promise=require('q');
 
 
 /*
@@ -25,4 +25,23 @@ exports.register = function (data, callback) {
 
     });
 
+}
+
+/*
+example of promise
+*/
+exports.promiseexp=function add()
+{
+    return new Promise((resolve,reject)=>{
+        db.query("select * from users",function(err,results){
+          if(err)
+            {
+            return reject(err);
+            }
+            else
+                {
+                return resolve(results);
+                }
+        });
+    });
 }

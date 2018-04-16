@@ -18,5 +18,6 @@ app.post('/edit', urlencodedParser, HomeController.edit);
 app.post('/delete', urlencodedParser, HomeController.delete);
 app.post('/register', urlencodedParser, UserController.register);
 app.get('/register',UserController.register);
+app.get('/promiseexp',UserController.promsieexp);
 
 }

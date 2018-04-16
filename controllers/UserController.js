@@ -29,3 +29,15 @@ exports.register = function (req, res) {
 
 
 }
+
+exports.promsieexp=function(req,res)
+{
+    user.promiseexp().then((result)=>{
+        res.render('user/promise',{'data':result});
+    }).catch(function(){
+        res.render('user/promise',{'data':"something not good"});
+    });
+    
+
+}
+
